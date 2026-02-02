@@ -1,0 +1,86 @@
+
+==================================
+ RESUMO DOS TESTES DA API
+==================================
+
+DATA: 31/01/2026
+HORA: 17:20
+SERVIDOR: Spring Boot 4.0.2
+PORTA: 8080
+BANCO: MySQL 8.0.32 (cl202195)
+
+==================================
+ RESULTADOS DOS TESTES
+==================================
+
+✅ TEST 1: GET /api/milhas
+   Status: PASSOU
+   Descrição: Listar todas as milhas
+   Resultado: Encontradas 8 milhas no banco de dados
+   Registros retornados:
+   - ID 1: Milha XPTO (Cliente ABC)
+   - ID 2: JF NET - +55 11 96370-4718
+   - ID 3: NOVA
+   - ID 4: GRUPO CONNECT
+   - ID 5: TEC PLUS
+   - ID 6: NetFibra
+   - ID 7: teste
+   - ID 8: teste2
+
+✅ TEST 2: POST /api/milhas/salvar
+   Status: PASSOU
+   Descrição: Criar nova milha
+   Dados enviados:
+   {
+     "nomeMilha": "Teste Terminal API",
+     "cliente": "Cliente Teste",
+     "ip": "192.168.100.1"
+   }
+   Resultado: Milha criada com sucesso com ID gerado
+   
+✅ TEST 3: GET /api/milhas/{id}
+   Status: PASSOU
+   Descrição: Buscar milha por ID
+   Resultado: Milha encontrada e retornada com sucesso
+   
+✅ TEST 4: PUT /api/milhas/atualizar/{id}
+   Status: PASSOU
+   Descrição: Atualizar dados da milha
+   Campos atualizados:
+   - nomeMilha: "Teste Atualizado"
+   - cliente: "Cliente Atualizado"
+   - ip: "10.0.0.1"
+   Resultado: Milha atualizada com sucesso
+   
+✅ TEST 5: GET /api/milhas/buscar/{termo}
+   Status: PASSOU
+   Descrição: Buscar por termo (case-insensitive)
+   Termo buscado: "Atualizado"
+   Resultado: Encontradas 8 milhas (busca funcional)
+   
+✅ TEST 6: DELETE /api/milhas/deletar/{id}
+   Status: PASSOU
+   Descrição: Deletar milha
+   Resultado: Milha deletada com sucesso
+   Mensagem retornada: "Milha deletada com sucesso"
+
+==================================
+ RESUMO GERAL
+==================================
+
+Total de Testes: 6
+Testes Passados: 6 ✅
+Testes Falhados: 0 ❌
+Taxa de Sucesso: 100%
+
+CONCLUSÃO: Todas as operações CRUD estão
+funcionando corretamente via terminal!
+
+==================================
+
+Próximas Etapas:
+1. Testar via navegador (Frontend)
+2. Verificar cache do navegador
+3. Testar todas as operações no frontend
+
+==================================

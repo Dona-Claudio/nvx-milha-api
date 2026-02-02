@@ -1,0 +1,32 @@
+Login (POST - /api/usuarios/login
+{
+  "email": "usuario@example.com",
+  "senha": "senha123"
+}
+--------------------------------
+
+Login (POST - /api/usuarios/login
+{
+  "email": "usuario@example.com",
+  "nomeUsuario": "usuario123",
+  "senha": "senha123"
+}
+-------------------------------------
+
+Editar Milha (PUT - /api/milhas/{id})
+{
+  "nomeMilha": "Milha XPTO Atualizada",
+  "cliente": "Cliente ABC Ltda",
+  "ip": "192.168.1.101"
+}
+--------------------------------------
+
+Criar Milha (POST - /api/milhas)
+{
+  "nomeMilha": "Milha XPTO",
+  "cliente": "Cliente ABC",
+  "ip": "192.168.1.100"
+}
+
+
+cd C:\Users\Public\Documents\NVX\api\milha; ls gradlew.bat; .\gradlew.bat bootRun --no-daemon

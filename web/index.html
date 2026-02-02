@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVX Fibra LTDA - Sistema de Milhas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #7b2cbf 0%, #c77dff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      color: #2c2c2c;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(123, 44, 191, 0.3);
+    }
+
+    .btn-secondary {
+      background: #e0e0e0;
+      color: #2c2c2c;
+      border: 2px solid #7b2cbf;
+    }
+
+    .btn-secondary:hover {
+      background: #c77dff;
+      color: white;
+    }
+
+    .info {
+      background: #f0f0f0;
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .info h3 {
+      color: #7b2cbf;
+      margin-bottom: 0.5rem;
+    }
+
+    .info p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .info ul {
+      margin-left: 1.5rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .info li {
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">NVX</div>
+    <h1>FIBRA LTDA</h1>
+    <p class="subtitle">Sistema de Gerenciamento de Milhas</p>
+
+    <div class="button-group">
+      <a href="./pages/login.html" class="btn btn-primary">🚀 Acessar Sistema</a>
+      <a href="./README.md" class="btn btn-secondary" target="_blank">📖 Documentação</a>
+    </div>
+
+    <div class="info">
+      <h3>ℹ️ Como Usar</h3>
+      <p><strong>1. Inicie a API:</strong></p>
+      <p style="font-family: monospace; background: #fff; padding: 0.5rem; border-radius: 3px;">
+        cd api/milha<br>
+        ./gradlew.bat bootRun --no-daemon
+      </p>
+
+      <p style="margin-top: 1rem;"><strong>2. Inicie o servidor web:</strong></p>
+      <p style="font-family: monospace; background: #fff; padding: 0.5rem; border-radius: 3px;">
+        python -m http.server 8000
+      </p>
+
+      <p style="margin-top: 1rem;"><strong>3. Acesse:</strong></p>
+      <p>http://localhost:8000</p>
+
+      <p style="margin-top: 1rem;"><strong>4. Faça login com suas credenciais:</strong></p>
+      <ul>
+        <li>Email cadastrado</li>
+        <li>Sua senha</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
