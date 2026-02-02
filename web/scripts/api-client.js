@@ -5,7 +5,9 @@
 
 class ApiClient {
   constructor() {
-    this.baseURL = 'http://localhost:8080/api';
+    // Use the deployed API by default. When running the frontend locally,
+    // the requests will be sent to this URL. Change if needed.
+    this.baseURL = 'https://nvx-milha-api.onrender.com/api';
     this.timeout = 10000;
   }
 
