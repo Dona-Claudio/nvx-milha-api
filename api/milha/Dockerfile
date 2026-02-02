@@ -12,7 +12,6 @@ RUN ./gradlew --version
 
 # Copy source code
 COPY src/ ./src/
-COPY bin/ ./bin/
 
 # Build the application
 RUN ./gradlew build -DskipTests

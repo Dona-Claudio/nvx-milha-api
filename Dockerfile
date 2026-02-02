@@ -14,7 +14,6 @@ RUN ./gradlew --version
 
 # Copy source code
 COPY api/milha/src/ ./src/
-COPY api/milha/bin/ ./bin/
 
 # Build the application
 RUN ./gradlew build -DskipTests
