@@ -1,7 +1,9 @@
+# Root Dockerfile that builds the project located in api/milha
+
 # Build stage
 FROM gradle:7.6-jdk17 AS builder
 WORKDIR /app
-COPY . .
+COPY api/milha/ ./
 RUN gradle build -DskipTests
 
 # Runtime stage
