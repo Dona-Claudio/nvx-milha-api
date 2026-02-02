@@ -7,8 +7,8 @@ WORKDIR /app
 COPY build.gradle settings.gradle gradlew gradlew.bat ./
 COPY gradle/ ./gradle/
 
-# Download dependencies
-RUN ./gradlew --version
+# Make gradlew executable and download dependencies
+RUN chmod +x ./gradlew && ./gradlew --version
 
 # Copy source code
 COPY src/ ./src/

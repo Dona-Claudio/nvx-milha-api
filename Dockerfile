@@ -9,8 +9,8 @@ WORKDIR /app
 COPY api/milha/build.gradle api/milha/settings.gradle api/milha/gradlew api/milha/gradlew.bat ./
 COPY api/milha/gradle/ ./gradle/
 
-# Download dependencies
-RUN ./gradlew --version
+# Make gradlew executable and download dependencies
+RUN chmod +x ./gradlew && ./gradlew --version
 
 # Copy source code
 COPY api/milha/src/ ./src/
