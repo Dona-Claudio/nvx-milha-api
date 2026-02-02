@@ -1,7 +1,8 @@
 # Root Dockerfile that builds the project located in api/milha
 
 # Build stage
-FROM gradle:7.6-jdk17 AS builder
+# Use Gradle 8.x which is required by Spring Boot plugin
+FROM gradle:8.4-jdk17 AS builder
 WORKDIR /app
 COPY api/milha/ ./
 RUN gradle build -DskipTests
